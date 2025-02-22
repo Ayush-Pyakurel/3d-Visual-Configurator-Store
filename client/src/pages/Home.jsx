@@ -10,6 +10,7 @@ import {
   headTextAnimation,
   slideAnimation,
 } from '../config/motion';
+import { CustomButton } from '../components';
 
 const Home = () => {
   const snap = useSnapshot(state);
@@ -29,7 +30,7 @@ const Home = () => {
           <motion.div className='home-content' {...headContainerAnimation}>
             <motion.div {...headTextAnimation}>
               <h1 className='head-text'>
-                Let's <br className='xl:block hidden' /> DO IT.
+                Let&rsquo;s <br className='xl:block hidden' /> DO IT.
               </h1>
             </motion.div>
             <motion.div
@@ -42,6 +43,13 @@ const Home = () => {
                 <strong>unleash your imaginatination</strong> and define your
                 own style
               </p>
+
+              <CustomButton
+                type='filled'
+                title='Customize It'
+                handleClick={() => (state.intro = false)}
+                customStyles='w-fit px-4 py-2.5 font-bold text-sm'
+              />
             </motion.div>
           </motion.div>
         </motion.section>
