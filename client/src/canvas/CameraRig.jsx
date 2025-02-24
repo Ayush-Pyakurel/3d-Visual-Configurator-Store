@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable no-const-assign */
 
 import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
